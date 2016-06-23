@@ -1,0 +1,10 @@
+<div ng-init="init()">
+    <button my-table class="btn btn-table" id="N1" displayName="1" reserve-func='reserveTable'
+        ng-class="{ 'btn-success' : available[1] , 'btn-gray': !available[1] }"
+    >1</button>
+    <button my-table class="btn btn-success btn-table" id="N2" displayName="2" reserve-func='reserveTable'
+        ng-class="{ 'btn-success' : available[2] , 'btn-gray': !available[2] }"
+    >2</button>
+
+    <!--<button ng-click="resetDB()" class="btn btn-danger debugButton">איפוס</button>-->
+</div>

@@ -1,0 +1,43 @@
+body{
+    padding: 20px;
+    background-color: #9acfea;
+    font-family: Alef, sans-serif;
+
+}
+select{
+    text-align-last: center;
+}
+
+.btn-center{
+    display: block;
+    margin: auto;
+}
+
+.btn-table{
+    height:50px;
+    width:50px;
+    margin: 5px;
+}
+
+.btn-gray{
+    background: #ddd;
+    border-color: #999;
+    color: white;
+}
+.btn-gray:hover{
+    background: #ddd;
+    border-color: #999;
+    color:white;
+}
+
+.btn-gray:focus{
+    color:white;
+}
+
+.debugButton{
+    position: absolute;
+    width: 40vw;
+    margin: 10vh 0;
+    bottom: 0;
+    left: 30vw;
+}
