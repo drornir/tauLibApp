@@ -2,13 +2,16 @@
  * Created by nitzanh on 4/23/16.
  */
 angular.module('app')
+    .controller('main', function($scope,$state){
+        $scope.state = $state;
+    })
     .controller('login', function ($scope, $http, $rootScope, $state) {
         $scope.submitLogin = function () {
             var username = document.getElementById("tauUsername").value;
             $http.get($rootScope.serverUrl+'/user/' + username, {})
                 .then(function (response) {
                     if (response.data.user == null) {
-                        document.getElementById("loginFailResponse").value = "Error: unrecognized user";
+                        $scope.errorMsg = "Error: unrecognized user";
                     } else {
                         $rootScope.tauUserId = response.data.user.user_id;
                         var reservedTable = response.data.reserved_table;

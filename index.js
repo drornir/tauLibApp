@@ -13,32 +13,32 @@ var app = angular.module('app', ['ui.router', 'ui.bootstrap'])
                 url: "/login",
                 templateUrl: "login.html",
                 controller: "login",
-                resolve:{
-                    stateTitle: function(){return 'כניסה'}
+                data:{
+                    stateTitle: 'כניסה'
                 }
             })
             .state('reservation', {
                 url: "/reservation",
                 templateUrl: "reservation.html",
                 controller: "reservation",
-                resolve:{
-                    stateTitle: function(){return 'הזמן שולחן'}
+                data:{
+                    stateTitle:  'הזמנה'
                 }
             })
             .state('filter', {
                 url: "/filter",
                 templateUrl: "filterRooms.html",
                 controller: "filterRooms",
-                resolve:{
-                    stateTitle: function(){return 'Login'}
+                data:{
+                    stateTitle: 'פילטור'
                 }
             })
             .state('room', {
                 url: "/showTables",
                 templateUrl: "room.html",
                 controller: "room",
-                resolve:{
-                    stateTitle: function(){return 'Login'}
+                data:{
+                    stateTitle:  'שולחנות'
                 }
             })
 

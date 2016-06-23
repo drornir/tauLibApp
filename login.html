@@ -1,9 +1,11 @@
 <div>
-    <div id="loginForm" style="margin-right:50px; margin-top:50px ">
-        <p>Please enter your credentials</p>
-        <input type="text" placeholder="Enter username" id="tauUsername"/><br />
-        <input type="password" placeholder="Enter password" id="AuthPassword" /><br/>
-        <input type="button" class="formButton" id="AuthSubmitButton" value="Login" ng-click="submitLogin()"/>
-        <p id="loginFailResponse" />
+    <div id="logo-container">
+        <!--<img src="logo.gif" alt="Logo">-->
+    </div>
+    <div id="loginForm" >
+        <input class="loginForm" type="text" placeholder="שם משתמש" id="tauUsername"/><br />
+        <input class="loginForm" type="password" placeholder="סיסמה" id="AuthPassword" /><br/>
+        <input class="loginForm" type="button" class="formButton" id="AuthSubmitButton" value="כניסה" ng-click="submitLogin()"/>
+        <p id="loginFailResponse">{{errorMsg}}</p>
     </div>
 </div>
