@@ -30,7 +30,7 @@ var app = angular.module('app', ['ui.router', 'ui.bootstrap'])
                 templateUrl: "filterRooms.html",
                 controller: "filterRooms",
                 data:{
-                    stateTitle: 'פילטור'
+                    stateTitle: 'הזמן שולחן'
                 }
             })
             .state('room', {
@@ -38,7 +38,7 @@ var app = angular.module('app', ['ui.router', 'ui.bootstrap'])
                 templateUrl: "room.html",
                 controller: "room",
                 data:{
-                    stateTitle:  'שולחנות'
+                    stateTitle:  'שולחנות פנויים'
                 }
             })
 

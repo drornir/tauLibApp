@@ -1,4 +1,10 @@
-<div>
-    <p id="reservedTable" />
-    <input type="button" class="formButton" id="cancelReservationBtn" value="Cancel This Reservation" ng-click="cancelReservation()"/>
+<div id="reservationPage" ng-init="init()">
+    <div class="textWrapper">
+        <h4>
+            השולחן הוזמן!
+        </h4>
+        <p id="reservedTable">{{reservedTable}}</p>
+    </div>
+
+    <input type="button" class="formButton" id="cancelReservationBtn" value="בטל הזמנה" ng-click="cancelReservation()"/>
 </div>

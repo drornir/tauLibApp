@@ -1,15 +1,15 @@
 <div>
      <br>
-    <form novalidate name="roomChoice">
+    <form id="filterForm" novalidate name="roomChoice">
         <select class="form-control" ng-options="lib.displayName for lib in libs" ng-model="selectedLib" required>
             <option value="">בחר ספריה</option>
-        </select><br>
+        </select>
         <select class="form-control" ng-options="floor.id for floor in selectedLib.floors" ng-model="selectedFloor" required>
             <option value="">בחר קומה</option>
-        </select><br>
+        </select>
         <select class="form-control flip" ng-options="room.id for room in selectedFloor.rooms" ng-model="selectedRoom" required>
             <option value="">בחר חדר</option>
-        </select><br>
+        </select>
         <button class="btn btn-success btn-center" ng-click="send()" ng-disabled="roomChoice.$invalid">בדוק זמינות</button>
     </form>
 </div>

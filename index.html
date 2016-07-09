@@ -9,7 +9,11 @@
     <link rel="stylesheet" href="main.css">
 </head>
 <body ng-controller="main">
-<header>{{state.current.data.stateTitle}}</header>
+<header>
+    <div class="headerLoginContainer" ng-click="$root.goToFilter()"><span ng-show="$root.showBackButton" class="glyphicon glyphicon-arrow-right"></span></div>
+    <div id="headerTitle">{{state.current.data.stateTitle}}</div>
+    <div class="headerLoginContainer" ng-click="$root.logout()"><span ng-show="$root.showLoginIcon" class="glyphicon glyphicon-off"></span></div>
+</header>
 <div id="mainView" ui-view></div>
 <script src="bower_components/angular/angular.js"></script>
 <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>

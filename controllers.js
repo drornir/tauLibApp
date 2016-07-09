@@ -2,10 +2,23 @@
  * Created by nitzanh on 4/23/16.
  */
 angular.module('app')
-    .controller('main', function($scope,$state){
+    .controller('main', function($scope,$state,$rootScope){
         $scope.state = $state;
+        $scope.$state = $state;
+        $rootScope.showLoginIcon = true;
+        $rootScope.logout = function(){
+            $state.go('login');
+        }
+        $rootScope.goToFilter = function(){
+            $state.go('filter');
+        }
     })
     .controller('login', function ($scope, $http, $rootScope, $state) {
+        $rootScope.showLoginIcon = false;
+        $scope.$on('$destroy', function(){
+            $rootScope.showLoginIcon = true;
+        })
+        
         $scope.submitLogin = function () {
             var username = document.getElementById("tauUsername").value;
             $http.get($rootScope.serverUrl+'/user/' + username, {})
@@ -29,7 +42,10 @@ angular.module('app')
         }
     })
     .controller('reservation', function ($scope, $http, $rootScope, $state) {
-        document.getElementById('reservedTable').value = JSON.stringify($rootScope.reservedTable);
+        // document.getElementById('reservedTable').value = JSON.stringify($rootScope.reservedTable);
+        $scope.init = function(){
+            $scope.reservedTable = Json.stringify($rootScope.reservedTable);
+        };
         $scope.cancelReservation = function () {
             $http.post($rootScope.serverUrl+'/user/' + tauUserId + '/cancel_reservation', {})
                 .then(function (response) {
@@ -85,9 +101,6 @@ angular.module('app')
         ]
 
         $scope.send = function () {
-            // console.log("lib=" + $scope.selectedLib.name);
-            // console.log("floor=" + $scope.selectedFloor.id);
-            // console.log("room=" + $scope.selectedRoom.id);
 
             $http.get($rootScope.serverUrl+'/table/vacant', {
                     params: {
@@ -114,12 +127,16 @@ angular.module('app')
 
     })
     .controller('room', function ($scope, $http, $rootScope, $state) {
+        $rootScope.showBackButton = true;
+        $scope.$on('$destroy', function(){
+            $rootScope.showBackButton = false;
+        });
         $scope.init= function(){
             $scope.available = {};
             $rootScope.vacantTables.forEach(function(table){
                 $scope.available[table.tableId] = true;
             })
-        }
+        };
 
         $scope.reserveTable = function (tableInfo) {
             $http.post($rootScope.serverUrl+'/reserveTable', tableInfo)

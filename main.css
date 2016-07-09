@@ -1,5 +1,6 @@
 body{
-    background-color: #3fb0ac;
+    /*background-color: #3fb0ac;*/
+    background-color: #78cfcc;
     font-family: Alef, sans-serif;
     height: 100vh;
 
@@ -18,6 +19,9 @@ select{
     height:50px;
     width:50px;
     margin: 5px;
+    border-radius: 0;
+    font-size: 20px;
+    font-weight: bold;
 }
 
 .btn-gray{
@@ -76,10 +80,11 @@ input.loginForm{
     padding: 10px;
     border: none;
 }
-input.loginForm[type="button"]{
+input[type="button"]{
     background: #FAE596;
     font-weight: bold;
     font-size: 20px;
+    border: none;
 }
 #loginForm{
     margin: 30px 0;
@@ -87,4 +92,47 @@ input.loginForm[type="button"]{
 #loginFailResponse{
     margin-top: 20px;
     color: red;
+}
+#cancelReservationBtn{
+    min-width: 100%;
+    height: 50px;
+}
+
+#reservationPage{
+
+}
+
+#filterForm select, #filterForm button{
+    height: 50px;
+    font-size: 20px;
+    line-height: 20px;
+    font-weight:bold;
+    border: none;
+    border-radius: 0;
+    width: 100%;
+}
+
+#filterForm button{
+    background: #FAE596;
+}
+#filterForm button[disabled]{
+    opacity: 1;
+    background: #fff6d5;
+}
+.textWrapper{
+    background: white;
+    padding: 10px;
+    margin: 0;
+}
+header{
+    display: flex;
+}
+.headerLoginContainer{
+    width: 10%;
+    padding: auto;
+    font-size: 17px;
+    line-height: 40px;
+}
+#headerTitle{
+    width: 80%;
 }
