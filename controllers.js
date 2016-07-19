@@ -20,7 +20,7 @@ angular.module('app')
         })
         
         $scope.submitLogin = function () {
-            var username = document.getElementById("tauUsername").value;
+            var username = $scope.tauUsername;
             $http.get($rootScope.serverUrl+'/user/' + username, {})
                 .then(function (response) {
                     if (response.data.user == null) {
@@ -37,7 +37,7 @@ angular.module('app')
                     }
                 })
                 .catch(function (error) {
-                    document.getElementById("loginFailResponse").value = "Error: " + error.errorCode;
+                    $scope.errorMsg = "Error: " + error.errorCode;
                 });
         }
     })
@@ -47,7 +47,7 @@ angular.module('app')
             $scope.reservedTable = Json.stringify($rootScope.reservedTable);
         };
         $scope.cancelReservation = function () {
-            $http.post($rootScope.serverUrl+'/user/' + tauUserId + '/cancel_reservation', {})
+            $http.post($rootScope.serverUrl+'/user/' + $rootScope.tauUserId + '/cancel_reservation', {})
                 .then(function (response) {
                     $state.go('filter');
                 })

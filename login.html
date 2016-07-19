@@ -3,8 +3,8 @@
         <!--<img src="logo.gif" alt="Logo">-->
     </div>
     <div id="loginForm" >
-        <input class="loginForm" type="text" placeholder="שם משתמש" id="tauUsername"/><br />
-        <input class="loginForm" type="password" placeholder="סיסמה" id="AuthPassword" /><br/>
+        <input ng-model="tauUsername" class="loginForm" type="text" placeholder="שם משתמש"/><br />
+        <input ng-model="AuthPassword" class="loginForm" type="password" placeholder="סיסמה" /><br/>
         <input class="loginForm" type="button" class="formButton" id="AuthSubmitButton" value="כניסה" ng-click="submitLogin()"/>
         <p id="loginFailResponse">{{errorMsg}}</p>
     </div>
