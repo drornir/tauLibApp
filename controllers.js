@@ -99,7 +99,11 @@ angular.module('app')
                     }]
             }
         ]
-
+        $scope.initFilterRooms = function(){
+            $scope.selectedLib = undefined;
+            $scope.selectedFloor = undefined;
+            $scope.selectedRoom = undefined;
+        }
         $scope.send = function () {
 
             $http.get($rootScope.serverUrl+'/table/vacant', {

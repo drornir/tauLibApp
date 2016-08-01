@@ -1,4 +1,4 @@
-<div>
+<div ng-init="initFilterRooms()">
      <br>
     <form id="filterForm" novalidate name="roomChoice">
         <select class="form-control" ng-options="lib.displayName for lib in libs" ng-model="selectedLib" required>

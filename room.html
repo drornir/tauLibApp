@@ -1,10 +1,30 @@
-<div ng-init="init()">
-    <button my-table class="btn btn-table" id="N1" displayName="1" reserve-func='reserveTable'
-        ng-class="{ 'btn-success' : available[1] , 'btn-gray': !available[1] }"
-    >1</button>
-    <button my-table class="btn btn-table" id="N2" displayName="2" reserve-func='reserveTable'
-        ng-class="{ 'btn-success' : available[2] , 'btn-gray': !available[2] }"
-    >2</button>
+<div id="roomContainer" ng-init="init()">
+    <button my-table class="btn btn-table" id="N1" reserve-func='reserveTable'
+
+            ng-class="{ 'btn-success' : available[1] , 'btn-gray': !available[1] }"
+    >1
+    </button>
+    <button my-table class="btn btn-table" id="N2" reserve-func='reserveTable'
+            style="left:0"
+            ng-class="{ 'btn-success' : available[2] , 'btn-gray': !available[2] }"
+    >2
+    </button>
+    <button my-table class="btn btn-table" id="N3" reserve-func='reserveTable'
+            style="top: 20%"
+            ng-class="{ 'btn-success' : available[3] , 'btn-gray': !available[3] }"
+    >3
+    </button>
+    <button my-table class="btn btn-table" id="N4"  reserve-func='reserveTable'
+            style="top: 40%"
+            ng-class="{ 'btn-success' : available[4] , 'btn-gray': !available[4] }"
+    >4
+    </button>
+
+    <button my-table class="btn btn-table" id="N5"  reserve-func='reserveTable'
+            style="left: 0; top: 20%; height: 30%; width: 20%"
+            ng-class="{ 'btn-success' : available[5] , 'btn-gray': !available[5] }"
+    >5
+    </button>
 
     <!--<button ng-click="resetDB()" class="btn btn-danger debugButton">איפוס</button>-->
 </div>

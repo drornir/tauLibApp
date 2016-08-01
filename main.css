@@ -16,12 +16,13 @@ select{
 }
 
 .btn-table{
-    height:50px;
-    width:50px;
+    height:10%;
+    width:40%;
     margin: 5px;
     border-radius: 0;
     font-size: 20px;
     font-weight: bold;
+    position: absolute;
 }
 
 .btn-gray{
@@ -61,6 +62,7 @@ select{
 #mainView{
     padding: 20px 20px;
     color: black;
+    height: calc(100% - 50px);
 }
 header{
     width: 100%;
@@ -135,4 +137,9 @@ header{
 }
 #headerTitle{
     width: 80%;
+}
+
+#roomContainer{
+    height: 100%;
+    position: relative;
 }
