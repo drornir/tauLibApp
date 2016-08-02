@@ -4,7 +4,8 @@
 
 var app = angular.module('app', ['ui.router', 'ui.bootstrap'])
     .run(function ($rootScope) {
-            $rootScope.serverUrl = 'http://127.0.0.1:3000';
+            // $rootScope.serverUrl = 'http://127.0.0.1:3000';
+            $rootScope.serverUrl = 'http://get-table-server.azurewebsites.net';
         }
     ).config(function ($stateProvider, $urlRouterProvider) {
         $urlRouterProvider.otherwise("/login");
