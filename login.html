@@ -6,6 +6,6 @@
         <input ng-model="tauUsername" class="loginForm" type="text" placeholder="שם משתמש"/><br />
         <input ng-model="AuthPassword" class="loginForm" type="password" placeholder="סיסמה" /><br/>
         <input class="loginForm" type="button" class="formButton" id="AuthSubmitButton" value="כניסה" ng-click="submitLogin()"/>
-        <p id="loginFailResponse">{{errorMsg}}</p>
+        <p id="loginFailResponse">{{$root.errorMsg}}</p>
     </div>
 </div>

@@ -3,7 +3,22 @@
         <h4>
             השולחן הוזמן!
         </h4>
-        <p id="reservedTable">{{reservedTable}}</p>
+        <p>
+            שולחן מספר
+            {{(reservedTable.number.slice(1))}}
+        </p>
+        <p>
+            ספרייה:
+            {{reservedTable.library.slice(1)}}
+        </p>
+        <p>
+            קומה:
+            {{reservedTable.floor.slice(1)}}
+        </p>
+        <p>
+            חדר:
+            {{reservedTable.room.slice(1)}}
+        </p>
     </div>
 
     <input type="button" class="formButton" id="cancelReservationBtn" value="בטל הזמנה" ng-click="cancelReservation()"/>

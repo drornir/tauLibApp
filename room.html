@@ -1,30 +1,29 @@
 <div id="roomContainer" ng-init="init()">
-    <button my-table class="btn btn-table" id="N1" reserve-func='reserveTable'
+    <button class="btn btn-table" number='N1' ng-click="available['N1'] && reserveTable(tablesMap['N1'])"
 
-            ng-class="{ 'btn-success' : available[1] , 'btn-gray': !available[1] }"
+            ng-class="{ 'btn-success' : available['N1'] , 'btn-gray': !available['N1'] }"
     >1
     </button>
-    <button my-table class="btn btn-table" id="N2" reserve-func='reserveTable'
+    <button my-table class="btn btn-table" number="N2" ng-click="available['N2'] && reserveTable(tablesMap['N2'])"
             style="left:0"
-            ng-class="{ 'btn-success' : available[2] , 'btn-gray': !available[2] }"
+            ng-class="{ 'btn-success' : available['N2'] , 'btn-gray': !available['N2'] }"
     >2
     </button>
-    <button my-table class="btn btn-table" id="N3" reserve-func='reserveTable'
+    <button my-table class="btn btn-table" number="N3" ng-click="available['N3'] && reserveTable(tablesMap['N3'])"
             style="top: 20%"
-            ng-class="{ 'btn-success' : available[3] , 'btn-gray': !available[3] }"
+            ng-class="{ 'btn-success' : available['N3'] , 'btn-gray': !available['N3'] }"
     >3
     </button>
-    <button my-table class="btn btn-table" id="N4"  reserve-func='reserveTable'
+    <button my-table class="btn btn-table" number="N4"  ng-click="available['N4'] && reserveTable(tablesMap['N4'])"
             style="top: 40%"
-            ng-class="{ 'btn-success' : available[4] , 'btn-gray': !available[4] }"
+            ng-class="{ 'btn-success' : available['N4'] , 'btn-gray': !available['N4'] }"
     >4
     </button>
 
-    <button my-table class="btn btn-table" id="N5"  reserve-func='reserveTable'
+    <button my-table class="btn btn-table" number="N5"  ng-click="available['N5'] && reserveTable(tablesMap['N5'])"
             style="left: 0; top: 20%; height: 30%; width: 20%"
-            ng-class="{ 'btn-success' : available[5] , 'btn-gray': !available[5] }"
+            ng-class="{ 'btn-success' : available['N5'] , 'btn-gray': !available['N5'] }"
     >5
     </button>
 
-    <!--<button ng-click="resetDB()" class="btn btn-danger debugButton">איפוס</button>-->
 </div>
